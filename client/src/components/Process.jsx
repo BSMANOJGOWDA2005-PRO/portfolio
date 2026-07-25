@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Volume2, Sparkles, Code, CheckCircle, Search, Layout } from 'lucide-react';
 
 export default function Process() {
-  const [activeTab, setActiveTab] = useState(1);
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
-
   const steps = [
     {
       id: '01',
       title: 'Research',
       description: 'I start by understanding goals, user requirements, and technical constraints to lay a rock-solid foundation for the project.',
       color: 'bg-[#d01b1b] text-white',
-      badgeColor: 'text-[#d01b1b]',
+      badgeColor: 'text-white',
     },
     {
       id: '02',
@@ -62,7 +58,7 @@ export default function Process() {
             </p>
           </motion.div>
 
-          {/* Right Column: Interactive Process Flow */}
+          {/* Right Column: Process Cards Grid */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -82,23 +78,8 @@ export default function Process() {
               </svg>
             </div>
 
-            {/* Media Widget Button in Center Connector */}
-            <div className="hidden sm:flex absolute top-4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 items-center justify-center gap-2">
-              <button
-                onClick={() => setIsPlayingAudio(!isPlayingAudio)}
-                className="w-14 h-14 rounded-full bg-slate-800 text-white shadow-xl hover:scale-110 transition-all flex items-center justify-center border-2 border-white"
-                aria-label="Toggle Audio Guide"
-              >
-                {isPlayingAudio ? (
-                  <Volume2 className="w-6 h-6 text-red-400 animate-pulse" />
-                ) : (
-                  <Play className="w-6 h-6 text-white ml-0.5" />
-                )}
-              </button>
-            </div>
-
             {/* Cards Stack / Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10 pt-8 sm:pt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10 pt-4">
               {steps.map((step, idx) => (
                 <motion.div
                   key={step.id}
