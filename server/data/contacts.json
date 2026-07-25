@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "BS Manoj Gowda",
+    "email": "manojgowdamanu005@gmail.com",
+    "subject": "Portfolio Test",
+    "message": "Testing contact submission API!",
+    "created_at": "2026-07-25T18:45:41.360Z"
+  },
+  {
+    "id": 2,
+    "name": "Manoj Gowda",
+    "email": "manojgowdamanu005@gmail.com",
+    "subject": "General Inquiry",
+    "message": "hi",
+    "created_at": "2026-07-25T19:11:56.696Z"
+  },
+  {
+    "id": 3,
+    "name": "Manoj Gowda",
+    "email": "manojgowdamanu005@gmail.com",
+    "subject": "ju",
+    "message": "werwe",
+    "created_at": "2026-07-25T19:15:40.314Z"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm start",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
+}
