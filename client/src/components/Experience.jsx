@@ -1,120 +1,204 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, Building2, Terminal, CheckCircle } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle, Code, Cpu, Database, BarChart3, Terminal } from 'lucide-react';
 
 export default function Experience() {
   const experiences = [
     {
-      role: 'Full-Stack Developer & AI Systems Engineer',
-      company: 'Independent Engineering & Open Source Projects',
-      location: 'Karnataka, India',
-      period: '2024 – Present',
-      badge: 'Current / Active',
-      description:
-        'Designing and building production-grade full-stack applications, desktop AI automation systems, and high-performance backend APIs.',
-      bullets: [
-        'Architected Nova AI Voice Assistant featuring multi-provider LLM fallback (Groq, OpenAI, GLM, DeepSeek) and PyWebView GUI.',
-        'Engineered a complete real estate web application on Python/Flask with SQLite3, featuring property search, role-based dashboards, and booking flows.',
-        'Constructed interactive Power BI dashboards utilizing Power Query and DAX to visualize key operational KPIs and business metrics.',
-        'Implemented secure REST APIs, clean database models, and modular Python system automation utilities.',
+      title: 'Full-Stack Developer & Data Analyst',
+      company: 'INDEPENDENT PROJECTS',
+      period: '2025 – PRESENT',
+      type: 'PRODUCTION & AI SYSTEMS',
+      icon: <Terminal className="w-6 h-6 text-white" />,
+      achievements: [
+        {
+          heading: 'Full-Stack Real Estate Platform',
+          desc: 'Built & deployed a full-stack real estate web application using Python, Flask, & SQLite3, featuring secure authentication, property search, booking workflows, and a role-based admin dashboard supporting 10+ live listings.',
+          tech: ['Python', 'Flask', 'SQLite3', 'REST APIs', 'HTML5', 'CSS3', 'JavaScript'],
+        },
+        {
+          heading: 'Interactive Power BI Analytics',
+          desc: 'Designed interactive Power BI dashboards translating raw datasets into KPI-driven business insights, using data modeling and visualization to surface actionable decision-making trends.',
+          tech: ['Power BI', 'Power Query', 'DAX', 'Data Modeling', 'KPI Analysis', 'Dashboarding'],
+        },
+        {
+          heading: 'AI-Powered Desktop Voice Assistant',
+          desc: 'Engineered a desktop voice assistant using Python, PyWebView, SQLite, Groq API, OpenAI GPT, GLM, & NVIDIA DeepSeek API. Implemented zero-downtime multi-provider AI fallback routing, Windows automation, web search, & live code execution.',
+          tech: ['Python', 'PyWebView', 'Groq API', 'OpenAI GPT', 'GLM API', 'DeepSeek API', 'SpeechRecognition'],
+        },
       ],
-      tech: ['Python', 'Flask', 'PyWebView', 'Groq API', 'OpenAI GPT', 'GLM API', 'DeepSeek API', 'SQL', 'SQLite3', 'JavaScript', 'React', 'Power BI', 'REST APIs', 'Git'],
+    },
+  ];
+
+  const certifications = [
+    {
+      title: 'Data Structures & Algorithms in Python',
+      issuer: 'Infosys Springboard',
+      date: 'April 2025',
+      badge: 'VERIFIED',
+    },
+    {
+      title: 'AI for Beginners',
+      issuer: 'HP LIFE',
+      date: 'September 2025',
+      badge: 'CERTIFIED',
+    },
+    {
+      title: 'Power BI Micro Course',
+      issuer: 'Skill Course',
+      date: 'March 2026',
+      badge: 'COMPLETED',
     },
   ];
 
   return (
-    <section id="experience" className="relative py-28 bg-[#050712] overflow-hidden bg-grid-pattern">
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none" />
+    <section id="experience" className="relative py-24 bg-[#d01b1b] text-white overflow-hidden">
+      
+      {/* Top Wave Curve Transition */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none z-10 -translate-y-1">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-16 sm:h-20 text-white fill-current"
+        >
+          <path d="M0,0 C300,90 600,-40 1200,40 L1200,0 L0,0 Z"></path>
+        </svg>
+      </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-8">
+        
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-16 space-y-4"
         >
-          <span className="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-2 block flex items-center justify-center gap-1.5">
-            <Briefcase className="w-4 h-4 text-cyan-400" /> // WORK HISTORY & INTERNSHIPS
+          <span className="text-xs font-mono uppercase tracking-widest text-white/80 block">
+            // CAREER & ACHIEVEMENTS
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Professional <span className="gradient-text">Experience</span>
+          <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white">
+            WORK EXPERIENCE
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mt-4 rounded-full" />
+          <p className="text-lg text-white/90 font-normal">
+            Hands-on software engineering experience building production web platforms, data BI dashboards, and AI voice automation.
+          </p>
+          <div className="w-16 h-1 bg-white mx-auto mt-4 rounded-full" />
         </motion.div>
 
-        {/* Timeline Container */}
-        <div className="relative border-l-2 border-slate-800/80 ml-4 sm:ml-32 space-y-12">
-          {experiences.map((exp, idx) => (
-            <motion.div
-              key={exp.role}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="relative pl-8 sm:pl-12"
-            >
-              {/* Timeline Marker Dot */}
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-cyan-400 shadow-[0_0_12px_rgba(0,242,254,0.8)]" />
-
-              {/* Date Badge on Desktop Left */}
-              <div className="hidden sm:block absolute -left-32 top-1 w-24 text-right">
-                <span className="text-xs font-mono font-semibold text-cyan-400 block">{exp.period}</span>
-                <span className="text-[10px] text-slate-400 block">{exp.badge}</span>
+        {/* Work Experience Section Card */}
+        {experiences.map((exp, idx) => (
+          <motion.div
+            key={exp.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-[#b5141b]/90 border border-white/20 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md mb-16"
+          >
+            {/* Header info */}
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/15">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+                  {exp.icon}
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-black text-white">
+                    {exp.title}
+                  </h3>
+                  <p className="text-xs font-mono tracking-widest text-white/80 font-bold uppercase mt-1">
+                    {exp.company}
+                  </p>
+                </div>
               </div>
 
-              {/* Card Container */}
-              <div className="glass-panel glass-panel-hover p-6 sm:p-8 rounded-3xl border border-white/10 relative">
-                {/* Mobile Period Header */}
-                <div className="sm:hidden flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono text-cyan-400">{exp.period}</span>
-                  <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">{exp.badge}</span>
-                </div>
+              <div className="flex items-center gap-3">
+                <span className="px-4 py-1.5 rounded-full bg-white/15 text-xs font-mono font-bold text-white border border-white/20">
+                  {exp.period}
+                </span>
+                <span className="px-4 py-1.5 rounded-full bg-white text-[#d01b1b] text-xs font-black uppercase">
+                  {exp.type}
+                </span>
+              </div>
+            </div>
 
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">{exp.role}</h3>
-                </div>
+            {/* Achievements List */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-8">
+              {exp.achievements.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white/10 border border-white/15 p-6 rounded-2xl flex flex-col justify-between hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <div>
+                    <h4 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-white shrink-0" />
+                      {item.heading}
+                    </h4>
+                    <p className="text-xs text-white/90 leading-relaxed mb-6">
+                      {item.desc}
+                    </p>
+                  </div>
 
-                <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 mb-4">
-                  <span className="flex items-center gap-1.5 text-cyan-300">
-                    <Building2 className="w-3.5 h-3.5" /> {exp.company}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5" /> {exp.location}
-                  </span>
-                </div>
-
-                <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-                  {exp.description}
-                </p>
-
-                {/* Key Bullet List */}
-                <ul className="space-y-2 mb-6">
-                  {exp.bullets.map((b, i) => (
-                    <li key={i} className="text-xs text-slate-400 flex items-start gap-2.5">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Tech Stack Pills */}
-                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800">
-                  {exp.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="px-2.5 py-1 text-[11px] font-mono rounded-md bg-slate-900 border border-slate-800 text-slate-300"
-                    >
-                      {t}
+                  <div className="pt-4 border-t border-white/10">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-white/70 block mb-2">
+                      STACK USED:
                     </span>
-                  ))}
+                    <div className="flex flex-wrap gap-1.5">
+                      {item.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="px-2.5 py-1 rounded-full bg-white/15 text-[11px] font-medium text-white border border-white/10"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+
+        {/* Certifications Highlight Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#b5141b]/80 border border-white/20 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-xl"
+        >
+          <div className="mb-6 text-center sm:text-left">
+            <h3 className="text-2xl font-black text-white tracking-tight">
+              Certifications &amp; Credentials
+            </h3>
+            <p className="text-xs text-white/80 font-mono mt-1">
+              Verified domain mastery in Data Structures, AI, &amp; Business Intelligence.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {certifications.map((cert) => (
+              <div
+                key={cert.title}
+                className="p-5 rounded-2xl bg-white/10 border border-white/15 flex flex-col justify-between hover:bg-white/20 transition-all"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#d01b1b] font-bold">
+                      {cert.badge}
+                    </span>
+                    <span className="text-[10px] font-mono text-white/70">{cert.date}</span>
+                  </div>
+                  <h4 className="text-sm font-bold text-white mb-1">{cert.title}</h4>
+                  <p className="text-xs text-white/80">{cert.issuer}</p>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

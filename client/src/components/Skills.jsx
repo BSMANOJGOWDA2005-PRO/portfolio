@@ -1,138 +1,102 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Text, Sphere } from '@react-three/drei';
 import { Code2, Server, Database, BarChart3, Wrench, Layers, Cpu } from 'lucide-react';
-import * as THREE from 'three';
-
-const skillList = [
-  { name: 'Python', color: '#3776AB', pos: [-2.2, 1.2, 0] },
-  { name: 'Flask', color: '#00f2fe', pos: [2.2, 1.4, 0] },
-  { name: 'SQLite', color: '#003B57', pos: [-1.8, -1.2, 0.5] },
-  { name: 'React', color: '#61DAFB', pos: [1.8, -1.3, 0.5] },
-  { name: 'JavaScript', color: '#F7DF1E', pos: [0, 2, -0.5] },
-  { name: 'Power BI', color: '#F2C811', pos: [0, -2, -0.5] },
-  { name: 'LLM AI', color: '#b829ea', pos: [0, 0, 1] },
-];
-
-function SkillOrb({ skill }) {
-  const meshRef = useRef();
-
-  useFrame((state, delta) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += delta * 0.4;
-    }
-  });
-
-  return (
-    <Float speed={2.5} rotationIntensity={1.2} floatIntensity={1.5} position={skill.pos}>
-      <group>
-        <mesh ref={meshRef}>
-          <sphereGeometry args={[0.55, 32, 32]} />
-          <meshStandardMaterial
-            color={skill.color}
-            emissive={skill.color}
-            emissiveIntensity={0.3}
-            roughness={0.2}
-            metalness={0.8}
-            wireframe
-          />
-        </mesh>
-        <Text
-          position={[0, 0, 0.65]}
-          fontSize={0.25}
-          color="#ffffff"
-          anchorX="center"
-          anchorY="middle"
-          fontWeight="bold"
-        >
-          {skill.name}
-        </Text>
-      </group>
-    </Float>
-  );
-}
-
-function Skill3DScene() {
-  return (
-    <div className="w-full h-80 relative rounded-3xl overflow-hidden glass-panel border border-cyan-500/20 mb-12 shadow-[0_0_30px_rgba(0,242,254,0.1)]">
-      <Canvas camera={{ position: [0, 0, 5], fov: 60 }} gl={{ alpha: true }}>
-        <ambientLight intensity={0.8} />
-        <pointLight position={[10, 10, 10]} intensity={1.5} color="#00f2fe" />
-        <pointLight position={[-10, -10, -10]} intensity={1.5} color="#7928ca" />
-
-        {skillList.map((skill) => (
-          <SkillOrb key={skill.name} skill={skill} />
-        ))}
-      </Canvas>
-      <div className="absolute bottom-3 left-4 text-[11px] font-mono text-cyan-400 bg-slate-950/80 px-3 py-1 rounded-full border border-white/10">
-        ✨ Interactive 3D Tech Orbs
-      </div>
-    </div>
-  );
-}
 
 export default function Skills() {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      icon: <Code2 className="w-5 h-5 text-cyan-400" />,
-      skills: ['Python', 'C', 'Java', 'HTML5', 'CSS3', 'JavaScript', 'SQL'],
+      icon: <Code2 className="w-5 h-5 text-white" />,
+      skills: ['Python', 'C', 'Java', 'HTML', 'CSS', 'JavaScript', 'React'],
     },
     {
-      title: 'Core CS Fundamentals',
-      icon: <Cpu className="w-5 h-5 text-purple-400" />,
-      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming', 'Operating Systems', 'Computer Networks'],
+      title: 'Core Technical Skills',
+      icon: <Cpu className="w-5 h-5 text-white" />,
+      skills: [
+        'Data Structures & Algorithms',
+        'Object-Oriented Programming',
+        'Operating Systems',
+        'Computer Networks',
+      ],
     },
     {
-      title: 'Backend & Web Development',
-      icon: <Server className="w-5 h-5 text-emerald-400" />,
-      skills: ['Flask', 'REST API Development', 'Authentication & Authorization', 'SQLite', 'SQL Database Design'],
+      title: 'Backend & Web Stack',
+      icon: <Server className="w-5 h-5 text-white" />,
+      skills: [
+        'Flask',
+        'REST API Development',
+        'Authentication & Authorization',
+        'SQL',
+        'SQLite',
+      ],
     },
     {
       title: 'Data Analytics & BI',
-      icon: <BarChart3 className="w-5 h-5 text-yellow-400" />,
-      skills: ['Power BI', 'Power Query', 'Data Visualization', 'Data Modeling', 'KPI Analysis', 'Dashboarding'],
+      icon: <BarChart3 className="w-5 h-5 text-white" />,
+      skills: [
+        'Power BI',
+        'Power Query',
+        'Data Visualization',
+        'Data Modeling',
+        'KPI Analysis',
+        'Dashboarding',
+      ],
     },
     {
       title: 'Tools & AI Technologies',
-      icon: <Wrench className="w-5 h-5 text-blue-400" />,
-      skills: ['Git', 'GitHub', 'Version Control', 'LLMs', 'Prompt Engineering', 'Linux', 'PyWebView'],
+      icon: <Wrench className="w-5 h-5 text-white" />,
+      skills: [
+        'Git',
+        'GitHub',
+        'Version Control',
+        'LLMs (Groq, OpenAI GPT, GLM, DeepSeek)',
+        'Prompt Engineering',
+        'Linux',
+        'PyWebView',
+      ],
     },
     {
-      title: 'Soft Skills & Attributes',
-      icon: <Layers className="w-5 h-5 text-pink-400" />,
-      skills: ['Problem Solving', 'Team Collaboration', 'Quick Learner', 'Adaptability', 'Time Management'],
+      title: 'Soft Skills',
+      icon: <Layers className="w-5 h-5 text-white" />,
+      skills: [
+        'Problem Solving',
+        'Team Collaboration',
+        'Quick Learner',
+        'Adaptability',
+        'Time Management',
+      ],
     },
   ];
 
   return (
-    <section id="skills" className="relative py-28 bg-[#030712] overflow-hidden">
-      {/* Background Lighting */}
-      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-purple-600/10 rounded-full blur-[160px] pointer-events-none" />
+    <section id="skills" className="relative py-24 bg-[#d01b1b] text-white overflow-hidden">
+      
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-400/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-16 space-y-4"
         >
-          <span className="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-2 block">
+          <span className="text-xs font-mono uppercase tracking-widest text-white/80 block">
             // TECHNICAL MATRIX
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Skills & <span className="gradient-text">Technologies</span>
+          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tight">
+            Skills &amp; Competencies
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mt-4 rounded-full" />
+          <p className="text-lg text-white/90">
+            Verified technical stack directly aligned with production engineering and AI systems development.
+          </p>
+          <div className="w-16 h-1 bg-white mx-auto mt-4 rounded-full" />
         </motion.div>
 
-        {/* 3D Skill Orbs Scene */}
-        <Skill3DScene />
-
-        {/* Categorized Skills Grid */}
+        {/* Skill Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((cat, idx) => (
             <motion.div
@@ -141,10 +105,10 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-panel glass-panel-hover p-6 rounded-2xl border border-white/10"
+              className="bg-[#b5141b]/90 border border-white/20 p-6 rounded-3xl backdrop-blur-md shadow-xl hover:border-white/40 transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2.5 rounded-xl bg-white/10 border border-white/20">
                   {cat.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white">{cat.title}</h3>
@@ -154,7 +118,7 @@ export default function Skills() {
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs font-mono rounded-lg bg-slate-900/90 border border-slate-800 text-slate-300 hover:border-cyan-500/40 hover:text-cyan-300 transition-colors"
+                    className="px-3.5 py-1.5 text-xs font-medium rounded-full bg-white/15 text-white border border-white/15 hover:bg-white hover:text-[#d01b1b] transition-all cursor-default"
                   >
                     {skill}
                   </span>
@@ -163,6 +127,7 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

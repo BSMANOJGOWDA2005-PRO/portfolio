@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Code2, Cpu } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Sparkles, Code2 } from 'lucide-react';
 
 export default function Loader({ onFinish }) {
   const [progress, setProgress] = useState(0);
@@ -13,9 +13,9 @@ export default function Loader({ onFinish }) {
           setTimeout(() => onFinish(), 400);
           return 100;
         }
-        return prev + Math.floor(Math.random() * 15) + 5;
+        return prev + Math.floor(Math.random() * 15) + 8;
       });
-    }, 120);
+    }, 100);
 
     return () => clearInterval(timer);
   }, [onFinish]);
@@ -24,49 +24,41 @@ export default function Loader({ onFinish }) {
     <motion.div
       exit={{ opacity: 0, scale: 1.05 }}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#030712] text-white selection:bg-cyan-500"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#d01b1b] text-white selection:bg-white selection:text-[#d01b1b]"
     >
-      {/* Background ambient lighting */}
-      <div className="absolute w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
-
       <div className="relative flex flex-col items-center max-w-sm w-full px-6">
-        {/* Animated logo orb */}
         <motion.div
           animate={{
             rotate: 360,
             scale: [1, 1.1, 1],
           }}
           transition={{
-            rotate: { duration: 10, repeat: Infinity, ease: 'linear' },
+            rotate: { duration: 8, repeat: Infinity, ease: 'linear' },
             scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
           }}
-          className="relative w-20 h-20 mb-8 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-cyan-500/20 via-purple-500/20 to-blue-500/20 border border-cyan-500/30 shadow-[0_0_30px_rgba(0,242,254,0.2)]"
+          className="relative w-20 h-20 mb-8 flex items-center justify-center rounded-2xl bg-white/10 border border-white/30 shadow-2xl"
         >
-          <Cpu className="w-10 h-10 text-cyan-400" />
+          <Code2 className="w-10 h-10 text-white" />
         </motion.div>
 
-        {/* Brand Name */}
-        <h2 className="text-xl font-bold tracking-widest text-slate-200 mb-2 uppercase">
+        <h2 className="text-2xl font-black tracking-widest text-white mb-2 uppercase">
           BS Manoj Gowda
         </h2>
-        <p className="text-xs font-mono text-cyan-400/80 tracking-wider mb-6 flex items-center gap-1.5">
-          <Sparkles className="w-3.5 h-3.5 animate-spin" /> INITIALIZING 3D EXPERIENCE...
+        <p className="text-xs font-mono text-white/80 tracking-wider mb-6 flex items-center gap-1.5 uppercase">
+          <Sparkles className="w-3.5 h-3.5 animate-spin text-white" /> Loading Portfolio System...
         </p>
 
-        {/* Progress Bar Container */}
-        <div className="w-full bg-slate-900/80 border border-slate-800 rounded-full h-2 overflow-hidden p-0.5 shadow-inner">
+        <div className="w-full bg-black/20 border border-white/20 rounded-full h-2.5 overflow-hidden p-0.5 shadow-inner">
           <motion.div
-            className="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full shadow-[0_0_12px_rgba(0,242,254,0.8)]"
+            className="h-full bg-white rounded-full shadow-lg"
             style={{ width: `${Math.min(progress, 100)}%` }}
             transition={{ ease: 'easeOut', duration: 0.2 }}
           />
         </div>
 
-        {/* Counter */}
-        <div className="w-full flex justify-between items-center text-xs font-mono text-slate-400 mt-3">
-          <span>SYSTEM READY</span>
-          <span className="text-cyan-400 font-semibold">{Math.min(progress, 100)}%</span>
+        <div className="w-full flex justify-between items-center text-xs font-mono text-white/80 mt-3">
+          <span>PORTFOLIO SYSTEM</span>
+          <span className="text-white font-bold">{Math.min(progress, 100)}%</span>
         </div>
       </div>
     </motion.div>
