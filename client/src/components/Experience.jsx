@@ -5,34 +5,20 @@ import { Briefcase, Calendar, MapPin, Building2, Terminal, CheckCircle } from 'l
 export default function Experience() {
   const experiences = [
     {
-      role: 'Full-Stack Developer & Data Analyst',
-      company: 'Independent Projects & Contract Work',
+      role: 'Full-Stack Developer & AI Systems Engineer',
+      company: 'Independent Engineering & Open Source Projects',
       location: 'Karnataka, India',
-      period: '2025 – Present',
-      badge: 'Current',
+      period: '2024 – Present',
+      badge: 'Current / Active',
       description:
-        'Architecting end-to-end full-stack web applications, AI assistant systems, and business intelligence reporting pipelines.',
+        'Designing and building production-grade full-stack applications, desktop AI automation systems, and high-performance backend APIs.',
       bullets: [
-        'Built and deployed a full-stack real estate web application using Python, Flask, and SQLite3, implementing secure auth, property search, and booking workflows.',
-        'Engineered Nova AI desktop voice assistant integrating Groq, OpenAI GPT, GLM, and NVIDIA DeepSeek LLM routing for uninterrupted execution during rate limits.',
-        'Designed interactive Power BI dashboards translating complex datasets into key operational metrics and strategic decision models.',
+        'Architected Nova AI Voice Assistant featuring multi-provider LLM fallback (Groq, OpenAI, GLM, DeepSeek) and PyWebView GUI.',
+        'Engineered a complete real estate web application on Python/Flask with SQLite3, featuring property search, role-based dashboards, and booking flows.',
+        'Constructed interactive Power BI dashboards utilizing Power Query and DAX to visualize key operational KPIs and business metrics.',
+        'Implemented secure REST APIs, clean database models, and modular Python system automation utilities.',
       ],
-      tech: ['Python', 'OOPs in Python', 'C', 'Java', 'Flask', 'SQL', 'SQLite3', 'HTML5', 'CSS3', 'JavaScript', 'React', 'PyWebView', 'Power BI', 'Groq API', 'OpenAI GPT', 'GLM API', 'DeepSeek API'],
-    },
-    {
-      role: 'HPE Internship — Deck Genie Project',
-      company: 'Hewlett Packard Enterprise (HPE)',
-      location: 'Remote / Enterprise Internship',
-      period: '2025',
-      badge: 'Internship',
-      description:
-        'Worked on the Deck Genie automated presentation & report generation suite, leveraging AI automation and full-stack backend development.',
-      bullets: [
-        'Contributed to automated presentation slide generation modules extracting analytics metadata from enterprise databases.',
-        'Implemented REST API integrations and backend parsing functions for document structure mapping.',
-        'Collaborated with cross-functional engineering team following Agile sprint ceremonies.',
-      ],
-      tech: ['Python', 'REST APIs', 'Document Automation', 'Git', 'Agile/Scrum'],
+      tech: ['Python', 'Flask', 'PyWebView', 'Groq API', 'OpenAI GPT', 'GLM API', 'DeepSeek API', 'SQL', 'SQLite3', 'JavaScript', 'React', 'Power BI', 'REST APIs', 'Git'],
     },
   ];
 
