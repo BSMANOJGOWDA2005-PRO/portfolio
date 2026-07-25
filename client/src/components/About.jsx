@@ -139,16 +139,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Curved Bottom Divider Transitioning to White Section */}
-      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10 translate-y-1 pointer-events-none">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="relative block w-full h-16 sm:h-24 text-white fill-current"
-        >
-          <path d="M0,0 C150,90 350,-40 500,40 C650,120 900,10 1200,60 L1200,120 L0,120 Z"></path>
-        </svg>
-      </div>
     </section>
   );
 }

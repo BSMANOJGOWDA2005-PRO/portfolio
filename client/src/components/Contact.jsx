@@ -54,9 +54,20 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 bg-white text-slate-900 overflow-hidden">
+    <section id="contact" className="relative py-28 bg-[#faf6ee] text-slate-900 overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Top Wave Curve Transition from Soft Warm Gray Projects */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none z-10 -translate-y-1 pointer-events-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-12 sm:h-16 text-[#ebe7e0] fill-current"
+        >
+          <path d="M0,0 C200,80 400,-20 600,60 C800,120 1000,10 1200,80 L1200,0 L0,0 Z"></path>
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
         
         {/* Section Header */}
         <motion.div
@@ -64,7 +75,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16 space-y-4"
+          className="text-center max-w-3xl mx-auto mb-16 space-y-4 pt-4"
         >
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#d01b1b]/10 border border-[#d01b1b]/30 text-xs font-mono font-bold text-[#d01b1b] uppercase tracking-wider">
             <MessageSquare className="w-4 h-4 text-[#d01b1b]" /> // GET IN TOUCH
@@ -72,7 +83,7 @@ export default function Contact() {
           <h2 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">
             Send an Email Message
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-slate-600 font-normal">
             Have a project in mind or an opportunity? Reach out directly!
           </p>
           <div className="w-20 h-1.5 bg-[#d01b1b] mx-auto mt-4 rounded-full" />
@@ -89,7 +100,7 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-3xl shadow-xl">
+            <div className="bg-white border border-[#eae3d9] p-8 rounded-3xl shadow-[0_8px_30px_rgb(218,197,175,0.2)]">
               <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <Sparkles className="w-6 h-6 text-[#d01b1b]" /> Contact Channels
               </h3>
@@ -100,7 +111,7 @@ export default function Contact() {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=manojgowdamanu005@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition-all group shadow-sm"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-[#faf6ee] border border-[#eae3d9] hover:border-red-300 transition-all group shadow-sm"
                 >
                   <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b] group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6" />
@@ -118,7 +129,7 @@ export default function Contact() {
                   href="https://wa.me/918971751923?text=Hi%20BS%20Manoj%20Gowda,%20I'm%20reaching%20out%20from%20your%20portfolio!"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition-all group shadow-sm"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-[#faf6ee] border border-[#eae3d9] hover:border-red-300 transition-all group shadow-sm"
                 >
                   <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b] group-hover:scale-110 transition-transform">
                     <MessageCircle className="w-5 h-5" />
@@ -134,7 +145,7 @@ export default function Contact() {
                 {/* Phone */}
                 <a
                   href="tel:+918971751923"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition-all group shadow-sm"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-[#faf6ee] border border-[#eae3d9] hover:border-red-300 transition-all group shadow-sm"
                 >
                   <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b] group-hover:scale-110 transition-transform">
                     <Phone className="w-5 h-5" />
@@ -148,7 +159,7 @@ export default function Contact() {
                 </a>
 
                 {/* Location */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#faf6ee] border border-[#eae3d9] shadow-sm">
                   <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b]">
                     <MapPin className="w-5 h-5" />
                   </div>
@@ -171,7 +182,7 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7"
           >
-            <form onSubmit={handleSubmit} className="bg-slate-50 border border-slate-200 p-8 sm:p-10 rounded-3xl shadow-xl space-y-6">
+            <form onSubmit={handleSubmit} className="bg-white border border-[#eae3d9] p-8 sm:p-10 rounded-3xl shadow-[0_8px_30px_rgb(218,197,175,0.2)] space-y-6">
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
@@ -186,7 +197,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="John Doe"
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
+                    className="w-full px-4 py-3 rounded-xl bg-[#faf6ee] border border-[#eae3d9] text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
                   />
                 </div>
 
@@ -202,7 +213,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
+                    className="w-full px-4 py-3 rounded-xl bg-[#faf6ee] border border-[#eae3d9] text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
                   />
                 </div>
               </div>
@@ -218,7 +229,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Project Collaboration / Opportunity"
-                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
+                  className="w-full px-4 py-3 rounded-xl bg-[#faf6ee] border border-[#eae3d9] text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
                 />
               </div>
 
@@ -234,7 +245,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Type your message here..."
-                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all resize-none shadow-sm font-medium"
+                  className="w-full px-4 py-3 rounded-xl bg-[#faf6ee] border border-[#eae3d9] text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all resize-none shadow-sm font-medium"
                 />
               </div>
 

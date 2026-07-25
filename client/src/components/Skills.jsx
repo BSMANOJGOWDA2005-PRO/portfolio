@@ -114,9 +114,20 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="relative py-28 bg-white text-slate-900 overflow-hidden">
+    <section id="skills" className="relative py-28 bg-[#faf6ee] text-slate-900 overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Top Wave Curve Transition from Soft Warm Gray Experience */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none z-10 -translate-y-1 pointer-events-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-12 sm:h-16 text-[#ebe7e0] fill-current"
+        >
+          <path d="M0,0 C200,80 400,-20 600,60 C800,120 1000,10 1200,80 L1200,0 L0,0 Z"></path>
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
         
         {/* Section Header */}
         <motion.div
@@ -147,7 +158,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-slate-50 border border-slate-200 p-6 rounded-3xl shadow-lg hover:border-red-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between"
+              className="bg-white border border-[#eae3d9] p-6 rounded-3xl shadow-[0_8px_30px_rgb(218,197,175,0.15)] hover:border-red-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -171,8 +182,8 @@ export default function Skills() {
               </div>
 
               {/* Progress Bar */}
-              <div className="pt-3 border-t border-slate-200">
-                <div className="w-full bg-slate-200 rounded-full h-2.5 p-0.5">
+              <div className="pt-3 border-t border-[#f0e9df]">
+                <div className="w-full bg-[#f0e9df] rounded-full h-2.5 p-0.5">
                   <div
                     className="bg-[#d01b1b] h-full rounded-full shadow-sm"
                     style={{ width: item.level }}
@@ -192,7 +203,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-slate-50 border border-slate-200 p-6 rounded-3xl shadow-lg hover:border-red-300 transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white border border-[#eae3d9] p-6 rounded-3xl shadow-[0_8px_30px_rgb(218,197,175,0.15)] hover:border-red-300 transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className="p-2.5 rounded-xl bg-red-50 border border-red-200">
@@ -205,7 +216,7 @@ export default function Skills() {
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3.5 py-1.5 text-xs font-medium rounded-full bg-white text-slate-800 border border-slate-300 hover:bg-[#d01b1b] hover:text-white transition-all cursor-default font-semibold shadow-sm"
+                    className="px-3.5 py-1.5 text-xs font-medium rounded-full bg-[#faf6ee] text-slate-800 border border-[#eae3d9] hover:bg-[#d01b1b] hover:text-white transition-all cursor-default font-semibold shadow-sm"
                   >
                     {skill}
                   </span>
@@ -215,17 +226,6 @@ export default function Skills() {
           ))}
         </div>
 
-      </div>
-
-      {/* Bottom Wave Curve Transition (White Skills to Deep Midnight Projects) */}
-      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10 translate-y-1 pointer-events-none">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="relative block w-full h-16 sm:h-24 text-[#070a14] fill-current"
-        >
-          <path d="M0,0 C200,80 400,-20 600,60 C800,120 1000,10 1200,80 L1200,120 L0,120 Z"></path>
-        </svg>
       </div>
     </section>
   );

@@ -53,20 +53,20 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="relative py-28 bg-white text-slate-900 overflow-hidden border-b border-slate-100">
+    <section id="experience" className="relative py-28 bg-[#ebe7e0] text-slate-900 overflow-hidden">
       
-      {/* Top Wave Curve Transition from Process (White) */}
+      {/* Top Wave Curve Transition from Soft Cream Process */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none z-10 -translate-y-1 pointer-events-none">
         <svg
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="relative block w-full h-12 sm:h-16 text-slate-50 fill-current"
+          className="relative block w-full h-12 sm:h-16 text-[#faf6ee] fill-current"
         >
           <path d="M0,0 C150,90 350,-40 500,40 C650,120 900,10 1200,60 L1200,0 L0,0 Z"></path>
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-4">
         
         {/* Section Header */}
         <motion.div
@@ -96,10 +96,10 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white border-2 border-slate-100 border-l-8 border-l-[#d01b1b] rounded-3xl p-6 sm:p-10 shadow-[0_10px_35px_rgba(0,0,0,0.06)] mb-16 relative overflow-hidden"
+            className="bg-white border border-[#dfd9ce] border-l-8 border-l-[#d01b1b] rounded-3xl p-6 sm:p-10 shadow-[0_8px_30px_rgb(200,190,175,0.2)] mb-16 relative overflow-hidden"
           >
             {/* Top Bar Header */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#e5dfd5]">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center shrink-0 shadow-sm">
                   {exp.icon}
@@ -115,7 +115,7 @@ export default function Experience() {
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-mono font-bold text-slate-800 border border-slate-200">
+                <span className="px-4 py-1.5 rounded-full bg-[#ebe7e0] text-xs font-mono font-bold text-slate-800 border border-[#dfd9ce]">
                   {exp.period}
                 </span>
                 <span className={`px-4 py-1.5 rounded-full text-xs uppercase ${exp.badgeColor}`}>
@@ -130,7 +130,7 @@ export default function Experience() {
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.02, translateY: -4 }}
-                  className="bg-slate-50 border border-slate-200 p-6 rounded-2xl flex flex-col justify-between hover:border-red-300 hover:bg-white hover:shadow-lg transition-all duration-300"
+                  className="bg-[#f7f4ed] border border-[#dfd9ce] p-6 rounded-2xl flex flex-col justify-between hover:border-red-300 hover:bg-white hover:shadow-lg transition-all duration-300"
                 >
                   <div>
                     <h4 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
@@ -142,7 +142,7 @@ export default function Experience() {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-200">
+                  <div className="pt-4 border-t border-[#e5dfd5]">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-slate-500 block mb-2 font-bold">
                       TECH STACK:
                     </span>
@@ -150,7 +150,7 @@ export default function Experience() {
                       {item.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-2.5 py-1 rounded-full bg-white text-[11px] font-mono text-slate-800 border border-slate-200 font-semibold shadow-sm"
+                          className="px-2.5 py-1 rounded-full bg-white text-[11px] font-mono text-slate-800 border border-[#dfd9ce] font-semibold shadow-sm"
                         >
                           {t}
                         </span>
@@ -169,7 +169,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white border-2 border-slate-100 rounded-3xl p-6 sm:p-8 shadow-[0_10px_35px_rgba(0,0,0,0.06)]"
+          className="bg-white border border-[#dfd9ce] rounded-3xl p-6 sm:p-8 shadow-[0_8px_30px_rgb(200,190,175,0.2)]"
         >
           <div className="mb-6 flex items-center gap-3">
             <Award className="w-7 h-7 text-[#d01b1b]" />
@@ -187,7 +187,7 @@ export default function Experience() {
             {certifications.map((cert) => (
               <div
                 key={cert.title}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-red-300 hover:bg-white hover:shadow-md transition-all"
+                className="p-5 rounded-2xl bg-[#f7f4ed] border border-[#dfd9ce] flex flex-col justify-between hover:border-red-300 hover:bg-white hover:shadow-md transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
