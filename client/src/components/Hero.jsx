@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="flex flex-wrap justify-center gap-2 mb-10 max-w-3xl"
         >
-          {['Python', 'OOPs in Python', 'C', 'Java', 'Flask', 'SQL', 'SQLite', 'React', 'HTML / CSS', 'JavaScript', 'Groq / OpenAI GPT / GLM / DeepSeek LLM', 'Power BI'].map((tech) => (
+          {['Python','C', 'Java', 'OOPs', 'DSA','Flask', 'SQL', 'SQLite', 'React', 'HTML / CSS', 'JavaScript', 'Groq / OpenAI GPT / GLM / DeepSeek LLM', 'Power BI'].map((tech) => (
             <span
               key={tech}
               className="px-3.5 py-1.5 text-xs font-mono rounded-lg bg-slate-900/90 border border-slate-800 text-slate-300 hover:border-cyan-500/40 hover:text-cyan-300 transition-colors"
