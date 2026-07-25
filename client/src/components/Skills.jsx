@@ -75,29 +75,34 @@ function Skill3DScene() {
 export default function Skills() {
   const skillCategories = [
     {
-      title: 'Programming Languages & Core CS',
+      title: 'Programming Languages',
       icon: <Code2 className="w-5 h-5 text-cyan-400" />,
-      skills: ['Python', 'OOPs in Python', 'C', 'Java', 'Data Structures & Algorithms', 'HTML5', 'CSS3', 'JavaScript', 'SQL'],
+      skills: ['Python', 'C', 'Java', 'HTML5', 'CSS3', 'JavaScript', 'SQL'],
     },
     {
-      title: 'Backend & Web Engineering',
-      icon: <Server className="w-5 h-5 text-purple-400" />,
-      skills: ['Flask', 'REST API Development', 'MVC Architecture', 'Authentication & Authorization', 'Web Applications'],
+      title: 'Core CS Fundamentals',
+      icon: <Cpu className="w-5 h-5 text-purple-400" />,
+      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming', 'Operating Systems', 'Computer Networks'],
     },
     {
-      title: 'Databases & Storage',
-      icon: <Database className="w-5 h-5 text-blue-400" />,
-      skills: ['SQLite3', 'SQL Query Optimization', 'Relational Schema Design', 'Database Management'],
+      title: 'Backend & Web Development',
+      icon: <Server className="w-5 h-5 text-emerald-400" />,
+      skills: ['Flask', 'REST API Development', 'Authentication & Authorization', 'SQLite', 'SQL Database Design'],
     },
     {
       title: 'Data Analytics & BI',
       icon: <BarChart3 className="w-5 h-5 text-yellow-400" />,
-      skills: ['Power BI', 'Power Query', 'Data Modeling', 'KPI Analysis', 'Data Visualization'],
+      skills: ['Power BI', 'Power Query', 'Data Visualization', 'Data Modeling', 'KPI Analysis', 'Dashboarding'],
     },
     {
-      title: 'AI & Tools',
-      icon: <Cpu className="w-5 h-5 text-emerald-400" />,
-      skills: ['Groq API', 'OpenAI GPT', 'GLM-4 API', 'NVIDIA DeepSeek API', 'Prompt Engineering', 'Git / GitHub', 'PyWebView', 'Linux'],
+      title: 'Tools & AI Technologies',
+      icon: <Wrench className="w-5 h-5 text-blue-400" />,
+      skills: ['Git', 'GitHub', 'Version Control', 'LLMs', 'Prompt Engineering', 'Linux', 'PyWebView'],
+    },
+    {
+      title: 'Soft Skills & Attributes',
+      icon: <Layers className="w-5 h-5 text-pink-400" />,
+      skills: ['Problem Solving', 'Team Collaboration', 'Quick Learner', 'Adaptability', 'Time Management'],
     },
   ];
 
