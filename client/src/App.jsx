@@ -23,7 +23,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#d01b1b] text-white selection:bg-white selection:text-[#d01b1b] font-sans relative">
+    <div className="min-h-screen bg-[#d01b1b] text-slate-900 selection:bg-[#d01b1b] selection:text-white font-sans relative">
       <AnimatePresence mode="wait">
         {loading && <Loader onFinish={() => setLoading(false)} />}
       </AnimatePresence>

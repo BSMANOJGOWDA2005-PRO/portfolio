@@ -14,7 +14,7 @@ export default function About() {
       ),
     },
     {
-      name: 'REACT & JAVA',
+      name: 'JAVASCRIPT & REACT',
       desc: 'Full-Stack Web Development',
       icon: (
         <div className="w-14 h-14 rounded-full bg-transparent border-2 border-cyan-300 flex items-center justify-center text-cyan-300">

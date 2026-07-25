@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, CheckCircle2, AlertCircle, Sparkles, MessageSquare, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle2, Sparkles, MessageSquare, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 bg-[#d01b1b] text-white overflow-hidden">
+    <section id="contact" className="relative py-24 bg-white text-slate-900 overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -66,16 +66,16 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16 space-y-4"
         >
-          <span className="text-xs font-mono uppercase tracking-widest text-white/80 flex items-center justify-center gap-1.5">
-            <MessageSquare className="w-4 h-4 text-white" /> // GET IN TOUCH
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#d01b1b]/10 border border-[#d01b1b]/30 text-xs font-mono font-bold text-[#d01b1b] uppercase tracking-wider">
+            <MessageSquare className="w-4 h-4 text-[#d01b1b]" /> // GET IN TOUCH
           </span>
-          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tight">
+          <h2 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">
             Send an Email Message
           </h2>
-          <p className="text-lg text-white/90">
+          <p className="text-lg text-slate-600">
             Have a project in mind or an opportunity? Reach out directly!
           </p>
-          <div className="w-16 h-1 bg-white mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1.5 bg-[#d01b1b] mx-auto mt-4 rounded-full" />
         </motion.div>
 
         {/* Content Grid */}
@@ -89,9 +89,9 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="bg-[#b5141b]/90 border border-white/20 p-8 rounded-3xl backdrop-blur-md shadow-xl">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-white" /> Contact Channels
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-3xl shadow-xl">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <Sparkles className="w-6 h-6 text-[#d01b1b]" /> Contact Channels
               </h3>
 
               <div className="space-y-4">
@@ -100,14 +100,14 @@ export default function Contact() {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=manojgowdamanu005@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition-all group shadow-sm"
                 >
-                  <div className="p-3 rounded-xl bg-white/15 text-white group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b] group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div className="min-w-0 flex-1 overflow-hidden">
-                    <span className="text-[11px] font-mono text-white/70 block">PRIMARY EMAIL</span>
-                    <span className="text-xs sm:text-sm font-bold text-white break-all block">
+                    <span className="text-[11px] font-mono text-slate-500 font-bold block uppercase">PRIMARY EMAIL</span>
+                    <span className="text-xs sm:text-sm font-bold text-slate-900 break-all block">
                       manojgowdamanu005@gmail.com
                     </span>
                   </div>
@@ -115,17 +115,17 @@ export default function Contact() {
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/918971751923?text=Hi%20MD%20YUSUF,%20I'm%20reaching%20out%20from%20your%20portfolio!"
+                  href="https://wa.me/918971751923?text=Hi%20BS%20Manoj%20Gowda,%20I'm%20reaching%20out%20from%20your%20portfolio!"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition-all group shadow-sm"
                 >
-                  <div className="p-3 rounded-xl bg-white/15 text-white group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b] group-hover:scale-110 transition-transform">
                     <MessageCircle className="w-5 h-5" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="text-[11px] font-mono text-white/70 block">WHATSAPP CHAT</span>
-                    <span className="text-sm font-semibold text-white block">
+                    <span className="text-[11px] font-mono text-slate-500 font-bold block uppercase">WHATSAPP CHAT</span>
+                    <span className="text-sm font-bold text-slate-900 block">
                       +91 8971751923
                     </span>
                   </div>
@@ -134,28 +134,28 @@ export default function Contact() {
                 {/* Phone */}
                 <a
                   href="tel:+918971751923"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition-all group shadow-sm"
                 >
-                  <div className="p-3 rounded-xl bg-white/15 text-white group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b] group-hover:scale-110 transition-transform">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="text-[11px] font-mono text-white/70 block">PHONE CALL</span>
-                    <span className="text-sm font-semibold text-white">
+                    <span className="text-[11px] font-mono text-slate-500 font-bold block uppercase">PHONE CALL</span>
+                    <span className="text-sm font-bold text-slate-900">
                       +91 8971751923
                     </span>
                   </div>
                 </a>
 
                 {/* Location */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/20">
-                  <div className="p-3 rounded-xl bg-white/15 text-white">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                  <div className="p-3 rounded-xl bg-red-50 text-[#d01b1b]">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="text-[11px] font-mono text-white/70 block">LOCATION</span>
-                    <span className="text-sm font-semibold text-white">
-                      Bhopal / Karnataka, India
+                    <span className="text-[11px] font-mono text-slate-500 font-bold block uppercase">LOCATION</span>
+                    <span className="text-sm font-bold text-slate-900">
+                      Karnataka, India
                     </span>
                   </div>
                 </div>
@@ -171,12 +171,12 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7"
           >
-            <form onSubmit={handleSubmit} className="bg-[#b5141b]/90 border border-white/20 p-8 sm:p-10 rounded-3xl shadow-xl backdrop-blur-md space-y-6">
+            <form onSubmit={handleSubmit} className="bg-slate-50 border border-slate-200 p-8 sm:p-10 rounded-3xl shadow-xl space-y-6">
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-mono text-white/80 mb-2 uppercase">
-                    Your Name <span className="text-white">*</span>
+                  <label htmlFor="name" className="block text-xs font-mono text-slate-700 font-bold mb-2 uppercase">
+                    Your Name <span className="text-[#d01b1b]">*</span>
                   </label>
                   <input
                     type="text"
@@ -186,13 +186,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="John Doe"
-                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 text-sm transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs font-mono text-white/80 mb-2 uppercase">
-                    Your Email <span className="text-white">*</span>
+                  <label htmlFor="email" className="block text-xs font-mono text-slate-700 font-bold mb-2 uppercase">
+                    Your Email <span className="text-[#d01b1b]">*</span>
                   </label>
                   <input
                     type="email"
@@ -202,13 +202,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 text-sm transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-xs font-mono text-white/80 mb-2 uppercase">
+                <label htmlFor="subject" className="block text-xs font-mono text-slate-700 font-bold mb-2 uppercase">
                   Subject
                 </label>
                 <input
@@ -218,13 +218,13 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Project Collaboration / Opportunity"
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 text-sm transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all shadow-sm font-medium"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-mono text-white/80 mb-2 uppercase">
-                  Message <span className="text-white">*</span>
+                <label htmlFor="message" className="block text-xs font-mono text-slate-700 font-bold mb-2 uppercase">
+                  Message <span className="text-[#d01b1b]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -234,13 +234,13 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Type your message here..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 text-sm transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#d01b1b] text-sm transition-all resize-none shadow-sm font-medium"
                 />
               </div>
 
               {status.success && (
-                <div className="p-4 rounded-xl bg-white/20 border border-white/30 text-white text-xs font-mono flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 shrink-0 text-white" />
+                <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-xs font-mono flex items-center gap-2 font-bold">
+                  <CheckCircle2 className="w-5 h-5 shrink-0 text-green-600" />
                   <span>{status.success}</span>
                 </div>
               )}
@@ -248,7 +248,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status.loading}
-                className="w-full py-4 rounded-full bg-white text-[#d01b1b] font-bold text-sm hover:bg-red-50 shadow-xl transition-all flex items-center justify-center gap-2.5 disabled:opacity-50 cursor-pointer"
+                className="w-full py-4 rounded-full bg-[#d01b1b] text-white font-extrabold text-sm hover:bg-red-700 shadow-xl transition-all flex items-center justify-center gap-2.5 disabled:opacity-50 cursor-pointer"
               >
                 {status.loading ? (
                   <>Sending...</>

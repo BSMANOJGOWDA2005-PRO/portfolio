@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { FolderGit2, Cpu, Mic, ShieldCheck, Terminal, FileText, Code2, Sparkles, ChevronDown, ChevronUp, Layers, Zap } from 'lucide-react';
+import { FolderGit2, Cpu, Mic, ShieldCheck, Terminal, FileText, Code2, Sparkles, ChevronDown, ChevronUp, Layers } from 'lucide-react';
 
 export default function Projects() {
   const [showNovaDeepDive, setShowNovaDeepDive] = useState(true);
@@ -55,37 +55,37 @@ export default function Projects() {
 
   const novaFeatures = [
     {
-      icon: <ShieldCheck className="w-5 h-5 text-white" />,
+      icon: <ShieldCheck className="w-5 h-5 text-red-400" />,
       title: 'Zero-Downtime Multi-LLM Failover',
       description:
         'Intelligent tier routing across Groq API (ultra-fast inference) → OpenAI GPT-4o/3.5 → GLM API → NVIDIA DeepSeek.',
     },
     {
-      icon: <Mic className="w-5 h-5 text-white" />,
+      icon: <Mic className="w-5 h-5 text-purple-400" />,
       title: 'Voice Intent & Speech Synthesis',
       description:
         'Speech-to-Text integration via SpeechRecognition with natural offline/online voice response feedback powered by pyttsx3.',
     },
     {
-      icon: <Terminal className="w-5 h-5 text-white" />,
+      icon: <Terminal className="w-5 h-5 text-blue-400" />,
       title: 'Windows System Automation',
       description:
         'Direct system-level execution: opening apps, managing running processes, volume control, and automated web navigation.',
     },
     {
-      icon: <Code2 className="w-5 h-5 text-white" />,
+      icon: <Code2 className="w-5 h-5 text-emerald-400" />,
       title: 'Code Generation & Live Execution',
       description:
         'Integrated code playground capable of generating Python/JS scripts, diagnosing syntax errors, and executing code snippets.',
     },
     {
-      icon: <FileText className="w-5 h-5 text-white" />,
+      icon: <FileText className="w-5 h-5 text-amber-400" />,
       title: 'Vision & Document Summarization',
       description:
         'Extracts structured insights and summaries from long-form PDF documents and text files using multimodal LLM prompts.',
     },
     {
-      icon: <Cpu className="w-5 h-5 text-white" />,
+      icon: <Cpu className="w-5 h-5 text-pink-400" />,
       title: 'PyWebView Glassmorphic GUI',
       description:
         'Native desktop wrapper hosting a responsive, dark neon glassmorphism web interface with animated soundwaves.',
@@ -93,9 +93,13 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="relative py-24 bg-[#d01b1b] text-white overflow-hidden">
+    <section id="projects" className="relative py-28 bg-[#070a14] text-white overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Background Glow */}
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[160px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
         
         {/* Section Header */}
         <motion.div
@@ -105,16 +109,16 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16 space-y-4"
         >
-          <span className="text-xs font-mono uppercase tracking-widest text-white/80 flex items-center justify-center gap-1.5">
-            <FolderGit2 className="w-4 h-4 text-white" /> // PORTFOLIO SHOWCASE
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-xs font-mono font-bold text-red-400 uppercase tracking-wider">
+            <FolderGit2 className="w-4 h-4 text-red-400" /> // PORTFOLIO SHOWCASE & SYSTEMS
           </span>
           <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tight">
             Featured Projects &amp; Systems
           </h2>
-          <p className="text-lg text-white/90">
+          <p className="text-slate-400 text-base sm:text-lg">
             Explore my production-ready full-stack web applications, desktop AI voice assistants, and analytics projects.
           </p>
-          <div className="w-16 h-1 bg-white mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1.5 bg-gradient-to-r from-red-500 to-purple-500 mx-auto mt-4 rounded-full" />
         </motion.div>
 
         {/* Project Cards Grid */}
@@ -130,17 +134,17 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="bg-[#b5141b]/90 rounded-3xl border border-white/20 overflow-hidden shadow-2xl backdrop-blur-md"
+          className="bg-[#0f1424] rounded-3xl border border-red-500/30 overflow-hidden shadow-2xl backdrop-blur-xl"
         >
           {/* Top Banner */}
-          <div className="p-6 sm:p-8 bg-[#9c0f16] border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
+          <div className="p-6 sm:p-8 bg-[#0a0d1a] border-b border-slate-800 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white">
+              <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shadow-[0_0_15px_rgba(229,28,36,0.3)]">
                 <Sparkles className="w-6 h-6" />
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/20 text-white border border-white/30">
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded bg-red-500/20 text-red-300 border border-red-500/30 font-bold">
                     FLAGSHIP ARCHITECTURE
                   </span>
                 </div>
@@ -152,12 +156,12 @@ export default function Projects() {
 
             <button
               onClick={() => setShowNovaDeepDive(!showNovaDeepDive)}
-              className="px-5 py-2 text-xs font-semibold rounded-full bg-white text-[#d01b1b] hover:bg-red-50 flex items-center gap-2 transition-all shadow-md"
+              className="px-5 py-2 text-xs font-semibold rounded-full bg-slate-900 text-slate-200 border border-slate-700 hover:border-red-500/40 hover:text-white flex items-center gap-2 transition-all cursor-pointer"
             >
               {showNovaDeepDive ? (
-                <>Hide Architecture Specs <ChevronUp className="w-4 h-4" /></>
+                <>Hide Architecture Specs <ChevronUp className="w-4 h-4 text-red-400" /></>
               ) : (
-                <>Expand Architecture Specs <ChevronDown className="w-4 h-4" /></>
+                <>Expand Architecture Specs <ChevronDown className="w-4 h-4 text-red-400" /></>
               )}
             </button>
           </div>
@@ -170,28 +174,28 @@ export default function Projects() {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.4 }}
-                className="p-6 sm:p-8 bg-[#b5141b]/60"
+                className="p-6 sm:p-8 bg-slate-950/80"
               >
                 {/* Fallback Pipeline Visualization */}
-                <div className="mb-8 p-6 rounded-2xl bg-white/10 border border-white/20">
-                  <h4 className="text-xs font-mono text-white uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <Layers className="w-4 h-4" /> Multi-LLM Tiered Failover Pipeline
+                <div className="mb-8 p-6 rounded-2xl bg-slate-900/90 border border-red-500/20">
+                  <h4 className="text-xs font-mono text-red-400 uppercase tracking-widest mb-4 flex items-center gap-2 font-bold">
+                    <Layers className="w-4 h-4 text-red-400" /> Multi-LLM Tiered Failover Pipeline
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-center text-xs font-mono">
-                    <div className="p-3.5 rounded-xl bg-white/15 border border-white/20 text-white">
-                      <span className="text-[10px] text-white/70 block mb-1">Tier 1 (Primary)</span>
+                    <div className="p-3.5 rounded-xl bg-slate-950 border border-red-500/40 text-red-300 font-bold">
+                      <span className="text-[10px] text-slate-500 block mb-1">Tier 1 (Primary)</span>
                       <strong>Groq API</strong>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-white/15 border border-white/20 text-white">
-                      <span className="text-[10px] text-white/70 block mb-1">Tier 2 (Fallback)</span>
+                    <div className="p-3.5 rounded-xl bg-slate-950 border border-purple-500/40 text-purple-300 font-bold">
+                      <span className="text-[10px] text-slate-500 block mb-1">Tier 2 (Fallback)</span>
                       <strong>OpenAI GPT</strong>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-white/15 border border-white/20 text-white">
-                      <span className="text-[10px] text-white/70 block mb-1">Tier 3 (Fallback)</span>
+                    <div className="p-3.5 rounded-xl bg-slate-950 border border-blue-500/40 text-blue-300 font-bold">
+                      <span className="text-[10px] text-slate-500 block mb-1">Tier 3 (Fallback)</span>
                       <strong>GLM API</strong>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-white/15 border border-white/20 text-white">
-                      <span className="text-[10px] text-white/70 block mb-1">Tier 4 (Fallback)</span>
+                    <div className="p-3.5 rounded-xl bg-slate-950 border border-emerald-500/40 text-emerald-300 font-bold">
+                      <span className="text-[10px] text-slate-500 block mb-1">Tier 4 (Fallback)</span>
                       <strong>NVIDIA DeepSeek</strong>
                     </div>
                   </div>
@@ -202,15 +206,15 @@ export default function Projects() {
                   {novaFeatures.map((feat, idx) => (
                     <div
                       key={idx}
-                      className="p-5 rounded-2xl bg-white/10 border border-white/15 hover:bg-white/15 transition-all"
+                      className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-red-500/30 transition-all"
                     >
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 rounded-xl bg-white/10">
+                        <div className="p-2 rounded-xl bg-slate-950 border border-slate-800">
                           {feat.icon}
                         </div>
                         <h4 className="text-sm font-bold text-white">{feat.title}</h4>
                       </div>
-                      <p className="text-xs text-white/80 leading-relaxed">
+                      <p className="text-xs text-slate-300 leading-relaxed">
                         {feat.description}
                       </p>
                     </div>
@@ -220,6 +224,17 @@ export default function Projects() {
             )}
           </AnimatePresence>
         </motion.div>
+      </div>
+
+      {/* Bottom Wave Curve Transition (Deep Midnight Projects to White Contact) */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10 translate-y-1 pointer-events-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-16 sm:h-24 text-white fill-current"
+        >
+          <path d="M0,0 C150,90 350,-40 500,40 C650,120 900,10 1200,120 L1200,120 L0,120 Z"></path>
+        </svg>
       </div>
     </section>
   );
