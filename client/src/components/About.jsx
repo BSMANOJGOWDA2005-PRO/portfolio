@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, CheckCircle2, Code, Terminal, Layers, Cpu } from 'lucide-react';
+import { GraduationCap, Terminal, Layers, Cpu } from 'lucide-react';
 
 export default function About() {
   const skillBadges = [
@@ -34,9 +34,20 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="relative py-20 bg-[#d01b1b] text-white overflow-hidden">
+    <section id="about" className="relative py-24 bg-[#d01b1b] text-white overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Top Red Wave Curve overlapping Hero Video */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none z-10 -translate-y-full pointer-events-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-16 sm:h-24 text-[#d01b1b] fill-current"
+        >
+          <path d="M0,120 C200,40 450,130 650,50 C850,-10 1050,80 1200,30 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column: Tilted 3D Photo Frame */}
@@ -48,7 +59,7 @@ export default function About() {
             className="lg:col-span-5 flex justify-center"
           >
             <div className="relative w-full max-w-sm photo-frame-3d">
-              {/* Device Frame Border matching Screenshot 2 */}
+              {/* Device Frame Border */}
               <div className="bg-[#1a1c23] p-3 pt-6 rounded-3xl border-4 border-slate-700 shadow-2xl relative">
                 <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-3 bg-slate-900 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-slate-700" />
@@ -129,7 +140,7 @@ export default function About() {
       </div>
 
       {/* Curved Bottom Divider Transitioning to White Section */}
-      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10 translate-y-1">
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10 translate-y-1 pointer-events-none">
         <svg
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"

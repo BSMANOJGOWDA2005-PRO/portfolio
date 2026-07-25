@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Download, Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { ChevronDown, Download, Eye, Play, Pause, Volume2, VolumeX, Mail } from 'lucide-react';
 
 export default function Hero() {
   const videoRef = useRef(null);
@@ -40,14 +40,14 @@ export default function Hero() {
           className="w-full h-full object-cover object-center"
         />
         {/* Subtle bottom shadow overlay for high contrast text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none z-10" />
       </div>
 
       {/* Main Hero Foreground Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 flex-1 flex flex-col justify-end pb-16 sm:pb-20">
         <div className="max-w-3xl text-left space-y-4">
           
-          {/* Main Name & Title Stack matching Screenshot 1 */}
+          {/* Main Name & Title Stack */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Hero() {
             I build fast, scalable applications using Python, Flask, React, Java, REST APIs, Power BI Analytics, and Multi-Provider LLMs (Groq, OpenAI, GLM, DeepSeek).
           </motion.p>
 
-          {/* Row of Pill Action Buttons */}
+          {/* Row of Solid White Pill Action Buttons for Maximum Visibility */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,25 +81,35 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="px-7 py-3 rounded-full bg-white text-[#d01b1b] font-extrabold text-sm hover:bg-red-50 shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5"
+              className="px-6 py-3 rounded-full bg-white text-[#d01b1b] font-extrabold text-sm hover:bg-red-50 shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               View My Work
             </a>
 
             <a
               href="#contact"
-              className="px-7 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white font-semibold text-sm hover:bg-white/35 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg"
+              className="px-6 py-3 rounded-full bg-white text-[#d01b1b] font-extrabold text-sm hover:bg-red-50 shadow-2xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
             >
-              Contact Me
+              <Mail className="w-4 h-4 text-[#d01b1b]" />
+              <span>Contact Me</span>
             </a>
 
             <a
-              href="https://github.com/BSMANOJGOWDA2005-PRO"
+              href="/BS_Manoj_Gowda_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white font-semibold text-sm hover:bg-white/35 transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 shadow-lg"
+              className="px-6 py-3 rounded-full bg-white text-[#d01b1b] font-extrabold text-sm hover:bg-red-50 shadow-2xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
             >
-              <Download className="w-4 h-4" />
+              <Eye className="w-4 h-4 text-[#d01b1b]" />
+              <span>View Resume</span>
+            </a>
+
+            <a
+              href="/BS_Manoj_Gowda_Resume.pdf"
+              download="BS_Manoj_Gowda_Resume.pdf"
+              className="px-6 py-3 rounded-full bg-white text-[#d01b1b] font-extrabold text-sm hover:bg-red-50 shadow-2xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
+            >
+              <Download className="w-4 h-4 text-[#d01b1b]" />
               <span>Download Resume / CV</span>
             </a>
           </motion.div>
@@ -107,7 +117,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating Red Circular Pause/Play Control matching Screenshot 1 */}
+      {/* Floating Red Circular Pause/Play Control */}
       <div className="absolute bottom-20 right-8 sm:right-16 z-30 flex items-center gap-3">
         <button
           onClick={togglePlay}
