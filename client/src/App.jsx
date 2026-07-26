@@ -4,10 +4,9 @@ import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Process from './components/Process';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -15,6 +14,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Log page visit to analytics backend
     fetch('/api/analytics', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -23,7 +23,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#d01b1b] text-slate-900 selection:bg-[#d01b1b] selection:text-white font-sans relative">
+    <div className="min-h-screen bg-[#030712] text-slate-100 selection:bg-cyan-500 selection:text-slate-950 font-sans relative">
       <AnimatePresence mode="wait">
         {loading && <Loader onFinish={() => setLoading(false)} />}
       </AnimatePresence>
@@ -34,10 +34,9 @@ export default function App() {
           <main>
             <Hero />
             <About />
-            <Process />
-            <Experience />
-            <Skills />
             <Projects />
+            <Skills />
+            <Experience />
             <Contact />
           </main>
           <Footer />
