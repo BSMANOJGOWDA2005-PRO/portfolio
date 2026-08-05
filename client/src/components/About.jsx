@@ -110,7 +110,7 @@ export default function About() {
 
                 <div>
                   <span className="text-xs font-mono text-white/80">2021 – 2023</span>
-                  <h4 className="text-base font-bold text-white">Class XII (PCMC)</h4>
+                  <h4 className="text-base font-bold text-white">Class XII (PCMB)</h4>
                   <p className="text-xs text-white/90">Raghavendra Gurukula PU College, Mysuru — <strong className="text-white">Percentage: 90.4%</strong></p>
                 </div>
               </div>
