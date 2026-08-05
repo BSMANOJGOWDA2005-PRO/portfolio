@@ -91,7 +91,7 @@ export default function About() {
               </h2>
 
               <p className="text-xl sm:text-2xl text-white/95 leading-relaxed font-normal">
-                Hi, my name is <strong className="font-bold text-white uppercase">BS MANOJ GOWDA</strong>, a Full-Stack Developer with hands-on experience building and deploying Python/Flask applications, React interfaces, REST APIs, SQL-backed systems, and AI-powered desktop automation tools.
+                Hi, my name is <strong className="font-bold text-white uppercase">BS MANOJ GOWDA</strong>. I am a Full-Stack Developer with hands-on experience building and deploying Python/Flask applications, REST APIs, and SQL-backed systems, plus practical exposure to AI-powered application development and Power BI analytics.
               </p>
             </div>
 

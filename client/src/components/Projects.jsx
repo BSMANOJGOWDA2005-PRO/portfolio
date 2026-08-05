@@ -8,17 +8,17 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'Nova AI — Desktop Voice Assistant',
+      title: 'AI-Powered Desktop Voice Assistant',
       category: 'AI & Desktop Automation',
       featured: true,
       description:
-        'Production-grade desktop voice assistant engineered with PyWebView glassmorphic UI, voice command intent execution, and zero-downtime multi-LLM fallback routing.',
+        'Developed an AI-powered desktop voice assistant using Python, integrating LLM-based chat, real-time speech recognition, text-to-speech, and intent-based routing for AI chat, code generation, web search, and Windows automation.',
       highlights: [
-        'Multi-provider AI failover (Groq → OpenAI GPT → GLM → NVIDIA DeepSeek) for 99.9% availability.',
-        'PyWebView desktop interface with live Windows system control, task manager, and process control.',
-        'Automated code generation, live execution, error traceback analysis, and PDF document summarization.',
+        'Designed a cost-free multi-provider AI fallback architecture (Groq → OpenAI → NVIDIA DeepSeek), ensuring uninterrupted AI responses during API rate limits and eliminating infrastructure costs.',
+        'Built a PyWebView desktop application with Windows automation (os, subprocess, psutil) for application control, website launching, system commands, and resource monitoring.',
+        'Integrated AI-powered code generation, debugging, execution, image analysis, PDF analysis, document summarization, and image-based content extraction.',
       ],
-      tags: ['Python', 'PyWebView', 'Groq API', 'OpenAI GPT', 'GLM API', 'DeepSeek API', 'SpeechRecognition', 'SQLite'],
+      tags: ['Python', 'PyWebView', 'Groq API', 'DeepSeek API', 'OpenRouter', 'SpeechRecognition', 'pyttsx3', 'SQLite'],
       github: 'https://github.com/BSMANOJGOWDA2005-PRO/AI_Nova_voice_assistant',
       demo: null,
     },
@@ -27,13 +27,13 @@ export default function Projects() {
       category: 'Full-Stack Web App',
       featured: true,
       description:
-        'Scalable real estate web application built with Python, Flask, and SQLite3, featuring role-based admin panels and booking workflows.',
+        'Developed a scalable real estate platform using Python, Flask, SQLite3, and REST APIs, implementing secure authentication and a lightweight database architecture.',
       highlights: [
-        'Supports 10+ live property listings with advanced search, filtering, and booking request workflows.',
-        'Role-based access control separating normal property seekers from administrative management.',
-        'Admin dashboard for approving, rejecting, or deleting property listings and inquiry messages.',
+        'Supports 10+ live property listings with separate user and admin panels for role-based access control.',
+        'Enabled users to browse properties, submit booking requests, and send inquiry messages to admins.',
+        'Admins can add, approve, reject, or delete listings, and manage bookings and messages through a dedicated dashboard with advanced search, filtering, and session management.',
       ],
-      tags: ['Python', 'Flask', 'SQLite3', 'REST APIs', 'HTML5', 'CSS3', 'JavaScript'],
+      tags: ['Python', 'Flask', 'SQLite3', 'REST APIs', 'Role-Based Access Control', 'Admin Dashboard'],
       github: 'https://github.com/BSMANOJGOWDA2005-PRO/Real_estate_web_application',
       demo: 'https://real-estate-web-application-mm46.onrender.com/',
     },
@@ -42,12 +42,12 @@ export default function Projects() {
       category: 'Data BI & Analytics',
       featured: false,
       description:
-        'Interactive business intelligence dashboards translating raw data into KPI-driven decision insights.',
+        'Designed interactive Power BI dashboards translating raw datasets into KPI-driven business insights using data modeling and visualization.',
       highlights: [
         'Built automated data cleaning pipelines using Power Query and advanced DAX formulas.',
         'Created executive data visual models for revenue metrics, conversion trends, and operational KPIs.',
       ],
-      tags: ['Power BI', 'Power Query', 'DAX', 'Data Modeling', 'KPI Dashboards'],
+      tags: ['Power BI', 'Power Query', 'Data Visualization', 'Data Modeling', 'KPI Analysis'],
       github: 'https://github.com/BSMANOJGOWDA2005-PRO',
       demo: null,
     },
@@ -56,39 +56,39 @@ export default function Projects() {
   const novaFeatures = [
     {
       icon: <ShieldCheck className="w-5 h-5 text-[#d01b1b]" />,
-      title: 'Zero-Downtime Multi-LLM Failover',
+      title: 'Cost-Free Multi-Provider AI Fallback',
       description:
-        'Intelligent tier routing across Groq API (ultra-fast inference) → OpenAI GPT-4o/3.5 → GLM API → NVIDIA DeepSeek.',
+        'Intelligent tier routing across Groq API → OpenAI → NVIDIA DeepSeek (and OpenRouter) for zero downtime during API rate limits.',
     },
     {
       icon: <Mic className="w-5 h-5 text-[#d01b1b]" />,
       title: 'Voice Intent & Speech Synthesis',
       description:
-        'Speech-to-Text integration via SpeechRecognition with natural offline/online voice response feedback powered by pyttsx3.',
+        'Real-time speech-to-text via SpeechRecognition with natural voice response feedback powered by pyttsx3.',
     },
     {
       icon: <Terminal className="w-5 h-5 text-[#d01b1b]" />,
       title: 'Windows System Automation',
       description:
-        'Direct system-level execution: opening apps, managing running processes, volume control, and automated web navigation.',
+        'System-level execution with os, subprocess, and psutil for application control, website launching, resource monitoring, and task management.',
     },
     {
       icon: <Code2 className="w-5 h-5 text-[#d01b1b]" />,
-      title: 'Code Generation & Live Execution',
+      title: 'Code Generation & Execution',
       description:
-        'Integrated code playground capable of generating Python/JS scripts, diagnosing syntax errors, and executing code snippets.',
+        'AI-powered code playground capable of generating, debugging, and executing code snippets on the fly.',
     },
     {
       icon: <FileText className="w-5 h-5 text-[#d01b1b]" />,
-      title: 'Vision & Document Summarization',
+      title: 'Multimodal Vision & PDF Analysis',
       description:
-        'Extracts structured insights and summaries from long-form PDF documents and text files using multimodal LLM prompts.',
+        'Extracts structured content from images, long-form PDF documents, and text files with instant summarization.',
     },
     {
       icon: <Cpu className="w-5 h-5 text-[#d01b1b]" />,
-      title: 'PyWebView Glassmorphic GUI',
+      title: 'PyWebView Desktop Interface',
       description:
-        'Native desktop wrapper hosting a responsive, dark neon glassmorphism web interface with animated soundwaves.',
+        'Native desktop wrapper providing a smooth, responsive glassmorphism user interface.',
     },
   ];
 
@@ -195,15 +195,15 @@ export default function Projects() {
                     </div>
                     <div className="p-3.5 rounded-xl bg-white border border-purple-200 text-slate-900 font-bold shadow-sm">
                       <span className="text-[10px] text-purple-600 block mb-1 font-extrabold">Tier 2 (Fallback)</span>
-                      <strong>OpenAI GPT</strong>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-white border border-blue-200 text-slate-900 font-bold shadow-sm">
-                      <span className="text-[10px] text-blue-600 block mb-1 font-extrabold">Tier 3 (Fallback)</span>
-                      <strong>GLM API</strong>
+                      <strong>OpenAI-gpt</strong>
                     </div>
                     <div className="p-3.5 rounded-xl bg-white border border-emerald-200 text-slate-900 font-bold shadow-sm">
-                      <span className="text-[10px] text-emerald-600 block mb-1 font-extrabold">Tier 4 (Fallback)</span>
+                      <span className="text-[10px] text-emerald-600 block mb-1 font-extrabold">Tier 3 (Fallback)</span>
                       <strong>NVIDIA DeepSeek</strong>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-white border border-blue-200 text-slate-900 font-bold shadow-sm">
+                      <span className="text-[10px] text-blue-600 block mb-1 font-extrabold">Tier 4 (Fallback)</span>
+                      <strong>GLM</strong>
                     </div>
                   </div>
                 </div>

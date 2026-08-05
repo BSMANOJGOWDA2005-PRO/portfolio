@@ -14,18 +14,18 @@ export default function Experience() {
       achievements: [
         {
           heading: 'Full-Stack Real Estate Web Platform',
-          desc: 'Built & deployed a full-stack real estate web application using Python, Flask, & SQLite3, featuring secure authentication, property search, booking workflows, and a role-based admin dashboard supporting 10+ live listings.',
-          tech: ['Python', 'Flask', 'SQLite3', 'REST APIs', 'HTML5', 'CSS3', 'JavaScript'],
+          desc: 'Built and deployed a full-stack real estate web application using Python, Flask, and SQLite3, implementing secure authentication, property search, booking workflows, and a role-based admin dashboard — supporting 10+ live property listings with separate user and admin access control.',
+          tech: ['Python', 'Flask', 'SQLite3', 'REST APIs', 'User/Admin Access Control'],
         },
         {
           heading: 'Interactive Power BI Analytics',
-          desc: 'Designed interactive Power BI dashboards translating raw datasets into KPI-driven business insights, using data modeling and visualization to surface actionable decision-making trends.',
-          tech: ['Power BI', 'Power Query', 'DAX', 'Data Modeling', 'KPI Analysis', 'Dashboarding'],
+          desc: 'Designed interactive Power BI dashboards translating raw datasets into KPI-driven business insights, using data modeling and visualization to surface actionable trends for decision-making.',
+          tech: ['Power BI', 'Power Query', 'Data Visualization', 'Data Modeling', 'KPI Analysis'],
         },
         {
           heading: 'AI-Powered Desktop Voice Assistant',
-          desc: 'Engineered a desktop voice assistant using Python, PyWebView, SQLite, Groq API, OpenAI GPT, GLM, & NVIDIA DeepSeek API. Implemented zero-downtime multi-provider AI fallback routing, Windows automation, web search, & live code execution.',
-          tech: ['Python', 'PyWebView', 'Groq API', 'OpenAI GPT', 'GLM API', 'DeepSeek API', 'SpeechRecognition'],
+          desc: 'Engineered an AI-powered desktop voice assistant using Python, PyWebView, SQLite, Groq API, NVIDIA DeepSeek API, and OpenRouter. Implemented LLM-based conversational AI, intelligent intent routing, multi-provider AI fallback (Groq → NVIDIA DeepSeek) for high availability, Windows automation, web search, and AI-powered code generation and execution.',
+          tech: ['Python', 'PyWebView', 'SQLite', 'Groq API', 'DeepSeek API', 'OpenRouter', 'Windows Automation'],
         },
       ],
     },

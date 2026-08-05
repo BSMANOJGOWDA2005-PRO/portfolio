@@ -52,7 +52,7 @@ export default function Skills() {
     {
       title: 'Programming Languages',
       icon: <Code2 className="w-5 h-5 text-[#d01b1b]" />,
-      skills: ['Python', 'C', 'Java', 'HTML', 'CSS', 'JavaScript', 'React'],
+      skills: ['Python (NumPy, Matplotlib)', 'C', 'Java', 'HTML', 'CSS', 'JavaScript'],
     },
     {
       title: 'Core Technical Skills',
@@ -88,16 +88,15 @@ export default function Skills() {
       ],
     },
     {
-      title: 'Tools & AI Technologies',
+      title: 'Tools & Technologies',
       icon: <Wrench className="w-5 h-5 text-[#d01b1b]" />,
       skills: [
         'Git',
         'GitHub',
         'Version Control',
-        'LLMs (Groq, OpenAI GPT, GLM, DeepSeek)',
+        'LLMs (Groq, DeepSeek, OpenRouter)',
         'Prompt Engineering',
         'Linux',
-        'PyWebView',
       ],
     },
     {

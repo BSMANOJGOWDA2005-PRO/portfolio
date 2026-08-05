@@ -62,14 +62,13 @@ export default function Hero() {
             </h2>
           </motion.div>
 
-          {/* Subtext Paragraph from Resume */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             className="text-base sm:text-xl text-white/95 leading-relaxed font-medium max-w-2xl drop-shadow"
           >
-            I build fast, scalable applications using Python, Flask, React, Java, REST APIs, Power BI Analytics, and Multi-Provider LLMs (Groq, OpenAI, GLM, DeepSeek).
+            Full-Stack Developer building scalable Python/Flask applications, REST APIs, SQL databases, AI-powered desktop automation tools, and Power BI business analytics.
           </motion.p>
 
           {/* Row of Solid White Pill Action Buttons for Maximum Visibility */}
